@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rhdh-gitops-ns-demo
+  description: Node.js UDI app provisioned with GitOps pre-created Dev Spaces namespace
+  annotations:
+    github.com/project-slug: rmallam-rhdh/rhdh-gitops-ns-demo
+    acme.io/devfile-path: devfile.yaml
+    acme.io/devspaces-url: https://devspaces.apps.rosa.rosa-rwx5g.f8y9.p3.openshiftapps.com
+    acme.io/devspaces-factory-url: https://devspaces.apps.rosa.rosa-rwx5g.f8y9.p3.openshiftapps.com#https://github.com/rmallam-rhdh/rhdh-gitops-ns-demo?new&devfilePath=devfile.yaml
+  tags:
+    - nodejs
+    - udi
+    - demo
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/guest
